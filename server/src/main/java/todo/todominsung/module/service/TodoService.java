@@ -4,14 +4,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import todo.todominsung.module.controller.TodoController;
+
 import todo.todominsung.module.dto.TodoDto;
 import todo.todominsung.module.entity.Todo;
 import todo.todominsung.module.mapper.TodoMapper;
 import todo.todominsung.module.repository.TodoRepository;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 
 
@@ -44,7 +41,7 @@ public class TodoService {
     // db에서 id를 찾아 text를 변경하고 todoDto로 매핑 후 반환
     public TodoDto patchTodo(Long id, String newText) {
         Todo todo = todoRepository.findById(id)
-            .orElseThrow(() -> new IllegalArgumentException("Todo not found with id: " + id));
+            .orElseThrow(() -> new IllegalArgumentException("id가 존재하지 않습니다: " + id));
         
         todo.setText(newText);
         Todo updatedTodo = todoRepository.save(todo);
@@ -62,7 +59,7 @@ public class TodoService {
     // completed를 true로 바꾸고 todoDto로 매핑 후 반환
     public TodoDto changeCompleted(Long id) {
         Todo todo = todoRepository.findById(id)
-            .orElseThrow(() -> new IllegalArgumentException("Todo not found with id: " + id));
+            .orElseThrow(() -> new IllegalArgumentException("id가 존재하지 않습니다: " + id));
         // completed 값 반전
         todo.setCompleted(!todo.getCompleted());
         Todo updatedTodo = todoRepository.save(todo);
