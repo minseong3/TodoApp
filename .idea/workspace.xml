@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d9112695-817d-4b7d-89c6-0a84409c2b40" name="Changes" comment="sssss">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/TodoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/TodoController.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2rsXvjVhHiJPf7DPMy7bMjIXbe1" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/CSPI/Desktop/vue-todo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.27816093",
+    "settings.editor.selected.configurable": "project.scopes",
+    "ts.external.directory.path": "C:\\Users\\CSPI\\Downloads\\ideaIU-2023.3.2.win\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TodoMsApplication">
+    <configuration name="TodoMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="todominsung" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="todo.todoMs.TodoMsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodominsungApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="todominsung" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="todo.todominsung.TodominsungApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-f644763e9732-24fca987" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9112695-817d-4b7d-89c6-0a84409c2b40" name="Changes" comment="" />
+      <created>1737348988529</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1737348988529</updated>
+      <workItem from="1737348990100" duration="6170000" />
+      <workItem from="1737355332469" duration="809000" />
+      <workItem from="1737356217782" duration="4457000" />
+      <workItem from="1737418708188" duration="9466000" />
+      <workItem from="1737438090376" duration="11104000" />
+      <workItem from="1737524749405" duration="21155000" />
+      <workItem from="1737610314098" duration="90000" />
+      <workItem from="1737610416646" duration="1891000" />
+      <workItem from="1737612334108" duration="86000" />
+      <workItem from="1737612432370" duration="94000" />
+      <workItem from="1737612545637" duration="197000" />
+      <workItem from="1737612779692" duration="268000" />
+      <workItem from="1737613067809" duration="103000" />
+      <workItem from="1737613187923" duration="52000" />
+      <workItem from="1737613251462" duration="76000" />
+      <workItem from="1737613343146" duration="93000" />
+      <workItem from="1737613444457" duration="142000" />
+    </task>
+    <task id="LOCAL-00001" summary="sssss">
+      <option name="closed" value="true" />
+      <created>1737611649212</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1737611649212</updated>
+    </task>
+    <task id="LOCAL-00002" summary="sssss">
+      <option name="closed" value="true" />
+      <created>1737612161240</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1737612161240</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="92" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="sssss" />
+    <option name="LAST_COMMIT_MESSAGE" value="sssss" />
+  </component>
+</project>
