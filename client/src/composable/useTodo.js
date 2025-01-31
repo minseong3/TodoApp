@@ -28,11 +28,18 @@ export function useTodo() {
     };
 
     const completeTodo = async (id) => {
+        if (!id) {
+            console.error("ID가 유효하지 않습니다.");
+            return;
+        }
         try {
-            const updatedTodo = await completeTodoItem(id);
+            // 현재 todo의 completed 값을 찾아 반전
             const todoIndex = todoItems.value.findIndex((item) => item.id === id);
             if(todoIndex !== -1) {
-                todoItems.value[todoIndex] = updatedTodo;
+                const currentCompleted = todoItems.value[todoIndex].completed;
+                const updatedCompleted = await completeTodoItem(id, {completed: !currentCompleted});
+
+                todoItems.value[todoIndex] = updatedCompleted;
             }
         } catch (error) {
             console.error('Failed to complete todo: ', error);

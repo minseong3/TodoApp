@@ -10,8 +10,8 @@ export const addTodoItem = async (newTodo) => {
   return response.data;
 };
 
-export const completeTodoItem = async (id) => {
-  const response = await apiClient.patch(`/todos/${id}/complete`);
+export const completeTodoItem = async (id, data) => {
+  const response = await apiClient.patch(`/todos/${id}/complete`, data);
   return response.data;
 };
 

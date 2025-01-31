@@ -1,14 +1,12 @@
 package todo.todominsung.module.controller;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import todo.todominsung.module.dto.TodoDto;
-
 import todo.todominsung.module.service.TodoService;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Map;
 
@@ -16,12 +14,10 @@ import java.util.Map;
 @RestController
 @RequestMapping("/todos")
 public class TodoController {
-    private final TodoService todoService;
-    // DI(의존성 주입 생성자 방법)
-    public TodoController(TodoService todoService) {
-        this.todoService = todoService;
-    }
+    @Autowired
+    private TodoService todoService;
 
+    // TODO..검색 조건 추가해서 구현하기
     @GetMapping
     public ResponseEntity<List<TodoDto>> getAllTodos() {
         List<TodoDto> todoDtos = todoService.getAllTodos();
@@ -35,13 +31,14 @@ public class TodoController {
     @PatchMapping("/{id}/text")
     public ResponseEntity<TodoDto> updateText(@PathVariable Long id, @RequestBody Map<String, String> updates) {
         String newText = updates.get("text");
-        TodoDto updatedTodo = todoService.patchTodo(id, newText); // Service 호출
+        TodoDto updatedTodo = todoService.updateTodoText(id, newText); // Service 호출
         return ResponseEntity.ok(updatedTodo);
     }
     @PatchMapping("/{id}/complete")
-    public ResponseEntity<TodoDto> completeTodo(@PathVariable Long id) {
-        TodoDto completedTodo = todoService.changeCompleted(id);
-        return ResponseEntity.ok(completedTodo);
+    public ResponseEntity<TodoDto> completeTodo(@PathVariable Long id, @RequestBody Map<String, Boolean> request) {
+        Boolean completed = request.get("completed");
+        TodoDto updatedTodo = todoService.completeTodo(id, completed);
+        return ResponseEntity.ok(updatedTodo);
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteTodo(@PathVariable Long id) {
