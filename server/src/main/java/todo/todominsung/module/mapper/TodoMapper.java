@@ -7,8 +7,10 @@ import todo.todominsung.module.dto.TodoDto;
 @Mapper
 public interface TodoMapper {
     //!-- 쿼리문 --!//
-    // Select 쿼리
+    // SelectAllTodos
     List<TodoDto> findAll();
+    // SelectSearchTodos
+    List<TodoDto> searchTodos(@Param("keyword") String keyword);
     // Select Todo by id
     @Select("SELECT id, text, completed FROM todo WHERE id = #{id}")
     TodoDto findById(Long id);
