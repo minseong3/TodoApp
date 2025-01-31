@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9112695-817d-4b7d-89c6-0a84409c2b40" name="Changes" comment="sssss">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/TodoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/TodoController.class" afterDir="false" />
-    </list>
+    <list default="true" id="d9112695-817d-4b7d-89c6-0a84409c2b40" name="Changes" comment="h2 -&gt; mybatis change refactoring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +22,29 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1737685258" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1737685257" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,8 +72,9 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/CSPI/Desktop/vue-todo",
     "node.js.detected.package.eslint": "true",
@@ -64,7 +82,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.27816093",
     "settings.editor.selected.configurable": "project.scopes",
@@ -74,6 +92,11 @@
 }]]></component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\CSPI\Desktop\vue-todo\server\src\main\resources\mapper" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TodoMsApplication">
     <configuration name="TodoMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -123,6 +146,7 @@
       <workItem from="1737613251462" duration="76000" />
       <workItem from="1737613343146" duration="93000" />
       <workItem from="1737613444457" duration="142000" />
+      <workItem from="1738285767033" duration="7997000" />
     </task>
     <task id="LOCAL-00001" summary="sssss">
       <option name="closed" value="true" />
@@ -140,7 +164,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737612161240</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refactoring">
+      <option name="closed" value="true" />
+      <created>1737617039902</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737617039902</updated>
+    </task>
+    <task id="LOCAL-00004" summary="h2 -&gt; mybatis change refactoring">
+      <option name="closed" value="true" />
+      <created>1738299797637</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738299797637</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +202,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="dev" />
                       </list>
                     </value>
                   </entry>
@@ -176,6 +216,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sssss" />
-    <option name="LAST_COMMIT_MESSAGE" value="sssss" />
+    <MESSAGE value="refactoring" />
+    <MESSAGE value="h2 -&gt; mybatis change refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="h2 -&gt; mybatis change refactoring" />
   </component>
 </project>
