@@ -2,6 +2,7 @@
     <ul>
         <p class="t1" v-for="(item, index) in props.todoItems" :key="item.id">
             <span :class="{completed: item.completed}">{{ item.text }}</span>
+            <span class="date">{{ item.date }}</span>
             <button @click="completeTodo(item.id)">완료</button>
             <button @click="removeTodo(item.id, index)">삭제</button>
         </p>
@@ -44,10 +45,10 @@
   }
   button {
       background: linear-gradient(to right, #9fd8ff, #ff92aa);
-      padding: 10px 15px 10px 15px;
+      padding: 8px 5px;
       box-sizing: border-box;
       border-radius: 50px;
-      min-width: 70px;
+      min-width: 65px;
       height: auto;
       font-size: 16px;
       font-weight: 700;
@@ -66,5 +67,10 @@
   .completed {
       text-decoration: line-through;
       color: gray;
+  }
+  .date {
+    margin-left: 10px;
+    font-size: 0.9em;
+    color: gray;
   }
 </style>
