@@ -25,10 +25,14 @@ public class TodoService {
         todoMapper.insertTodo(todoDto);
         return todoDto;
     }
+    // Todo 검색 조회
+    public List<TodoDto> searchTodos(String keyword) {
+        return todoMapper.searchTodos(keyword);
+    }
     // Todo 전체 조회
     public List<TodoDto> getAllTodos() {
-        List<TodoDto> todos = todoMapper.findAll();
-        return todos;
+        List<TodoDto> allTodos = todoMapper.findAll();
+        return allTodos;
     }
     // db에서 id를 찾아 text를 변경하고 todoDto로 매핑 후 반환
     public TodoDto updateTodoText(Long id, String newText) {

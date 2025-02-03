@@ -5,6 +5,7 @@ import {
     completeTodoItem,
     removeTodoItem,
     clearAllTodoItems,
+    searchTodoItems,
 } from "@/api/todoApi";
 
 export function useTodo() {
@@ -27,6 +28,18 @@ export function useTodo() {
         }
     };
 
+    const searchTodos = async (keyword) => {
+        try {
+            if(!keyword.trim()) {
+                // 검색어가 없으면 전체 목록 다시 로드
+                await loadTodos();
+                return;
+            }
+            todoItems.value = await searchTodoItems(keyword);
+        } catch (error) {
+            console.error('Failed to search todos: ', error);
+        }
+    }
     const completeTodo = async (id) => {
         if (!id) {
             console.error("ID가 유효하지 않습니다.");
@@ -68,5 +81,5 @@ export function useTodo() {
         loadTodos();
     });
 
-    return { todoItems, addTodo, completeTodo, removeTodo, clearTodos };
+    return { todoItems, addTodo, completeTodo, removeTodo, clearTodos, searchTodos };
 }

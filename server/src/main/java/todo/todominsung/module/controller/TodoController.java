@@ -18,6 +18,11 @@ public class TodoController {
     private TodoService todoService;
 
     // TODO..검색 조건 추가해서 구현하기
+    @GetMapping("/search")
+    public ResponseEntity<List<TodoDto>> searchTodos(@RequestParam(required = false) String keyword) {
+        List<TodoDto> results = todoService.searchTodos(keyword);
+        return ResponseEntity.ok(results);
+    }
     @GetMapping
     public ResponseEntity<List<TodoDto>> getAllTodos() {
         List<TodoDto> todoDtos = todoService.getAllTodos();

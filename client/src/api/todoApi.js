@@ -19,6 +19,13 @@ export const removeTodoItem = async (id) => {
   await apiClient.delete(`/todos/${id}`);
 };
 
+export const searchTodoItems = async (keyword) => {
+  const response = await apiClient.get(`/todos/search`, {
+    params: {keyword}
+  });
+  console.log("검색 결과:", response.data);
+  return response.data;
+}
 export const clearAllTodoItems = async () => {
   await apiClient.delete('/todos');
 };

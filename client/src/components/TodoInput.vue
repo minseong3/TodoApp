@@ -2,6 +2,8 @@
   <div class="container">
     <input v-model="todoInput" type="text" placeholder="할 일을 입력하세요" @keyup="addTodo">
     <button class="b1" @click="addTodo">추가</button>
+    <input v-model="keyword" type="text" placeholder="검색 키워드를 입력하세요" @keyup="searchTodos">
+    <button class="b1" @click="searchTodos">검색</button>
     <button class="b2" @click="clearAllTodoItems">전부 삭제</button>
   </div>
 </template>
@@ -10,10 +12,17 @@
   import { ref, defineEmits } from 'vue';
 
   // 부모 컴포넌트로 이벤트를 전달하기 위한 함수
-  const emit = defineEmits(['add', 'clear']);
+  const emit = defineEmits(['add', 'clear', 'search']);
 
   // 입력된 할 일을 저장하는 반응형 변수 선언
   const todoInput = ref('');
+  const keyword = ref('');
+
+  // 현재 날짜를 추가하기위한 한수 선언
+  const getCurrentDate = () => {
+    const now = new Date();
+    return `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`;
+  };
 
   // methodss
   async function addTodo() {
@@ -25,7 +34,8 @@
     try {
       const newTodo = {
         text: todo,
-        completed: false
+        completed: false,
+        date: getCurrentDate()
       };
       emit('add', newTodo); // 서버 응답 데이터를 부모 컴포넌트에 전송
       clearTodo();
@@ -41,6 +51,16 @@
     }
   }
 
+  async function searchTodos() {
+    const searchText = keyword.value;
+    try {
+      emit('search', searchText.trim());
+      clearKeyword();
+    } catch (error) {
+      console.error('Failed to search todos: ', error);
+    }
+  }
+
   async function clearAllTodoItems() {
     try {
       emit('clear');
@@ -49,8 +69,9 @@
     }
   }
 
-  // 데이터를 추가하고나서 입력창 비우기
+  // 입력창 비우기
   const clearTodo = () => todoInput.value = '';
+  const clearKeyword = () => keyword.value = '';
 </script>
 
 <style scoped>
@@ -68,14 +89,15 @@
     padding: 10px;
     font-size: 16px;
     margin-bottom: 10px; /* 버튼과 간격을 줌 */
+    margin-left: 10px;
     width: 250px; /* 적당한 너비 설정 */
   }
 
   .b1 {
     background: linear-gradient(to right, #9fd8ff, #ff92aa);
-    padding: 10px 20px;
+    padding: 8px 5px;
     border-radius: 50px;
-    min-width: 85px;
+    min-width: 65px;
     font-size: 16px;
     font-weight: bold;
     color: #000000;
@@ -85,15 +107,14 @@
   }
   .b2 {
     background: linear-gradient(to right, #ff0000, #f700ff);
-    padding: 10px 20px;
+    padding: 10px 5px;
     border-radius: 50px;
-    min-width: 85px;
+    min-width: 65px;
     font-size: 16px;
     font-weight: bold;
-    color: white;
+    color: #000000;
     cursor: pointer;
     margin-left: 10px;
     box-shadow: 0px 2px 2px 2px #ffffff40 inset, 0px -2px 2px 2px #00000020 inset;
-    transform: translateX(550px);
   }
 </style>
