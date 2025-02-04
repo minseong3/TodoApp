@@ -6,6 +6,7 @@ import {
     removeTodoItem,
     clearAllTodoItems,
     searchTodoItems,
+    filteredTodos
 } from "@/api/todoApi";
 
 export function useTodo() {
@@ -21,8 +22,8 @@ export function useTodo() {
 
     const addTodo = async (newTodo) => {
         try {
-            const todo = await addTodoItem(newTodo);
-            todoItems.value.push(todo);
+            await addTodoItem(newTodo);
+            loadTodos();
         } catch (error) {
             console.error('Failed to add todo: ', error);
         }
@@ -60,6 +61,7 @@ export function useTodo() {
     };
 
     const removeTodo = async (id, index) => {
+        console.log(id);
         try {
             await removeTodoItem(id);
             todoItems.value.splice(index, 1);
@@ -77,9 +79,17 @@ export function useTodo() {
         }
     };
 
+    const filteringTodos = async (category) => {
+        try {
+            todoItems.value = await filteredTodos(category);
+        } catch (error) {
+            console.error('Failed to filtering todos: ', error);
+        }
+    }
+
     onMounted(() => {
         loadTodos();
     });
 
-    return { todoItems, addTodo, completeTodo, removeTodo, clearTodos, searchTodos };
+    return { todoItems, addTodo, completeTodo, removeTodo, clearTodos, searchTodos, filteringTodos };
 }

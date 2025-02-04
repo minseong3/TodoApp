@@ -1,10 +1,28 @@
 <template>
-  <div class="container">
-    <input v-model="todoInput" type="text" placeholder="할 일을 입력하세요" @keyup="addTodo">
-    <button class="b1" @click="addTodo">추가</button>
-    <input v-model="keyword" type="text" placeholder="검색 키워드를 입력하세요" @keyup="searchTodos">
-    <button class="b1" @click="searchTodos">검색</button>
-    <button class="b2" @click="clearAllTodoItems">전부 삭제</button>
+  <div>
+    <div class="add-input">
+      <input v-model="todoInput" type="text" placeholder="할 일을 입력하세요" @keyup.enter="addTodo">
+      <select v-model="selectedCategory">
+        <option value="공부">공부</option>
+        <option value="운동">운동</option>
+        <option value="업무">업무</option>
+        <option value="기타">기타</option>
+      </select>
+      <button class="b1" @click="addTodo">추가</button>
+      <button class="b2" @click="clearAllTodoItems">전부 삭제</button>
+
+      <div class="search">
+        <select v-model="searchTodoCategory" @change="filterTodos">
+          <option value="전체">전체</option>
+          <option value="공부">공부</option>
+          <option value="운동">운동</option>
+          <option value="업무">업무</option>
+          <option value="기타">기타</option>
+        </select>
+        <input v-model="keyword" type="text" placeholder="검색 키워드를 입력하세요" @keyup.enter="searchTodos">
+        <button class="b3" @click="searchTodos">검색</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -17,6 +35,8 @@
   // 입력된 할 일을 저장하는 반응형 변수 선언
   const todoInput = ref('');
   const keyword = ref('');
+  const selectedCategory = ref("공부");
+  const searchTodoCategory = ref("전체");
 
   // 현재 날짜를 추가하기위한 한수 선언
   const getCurrentDate = () => {
@@ -27,6 +47,7 @@
   // methodss
   async function addTodo() {
     const todo = todoInput.value;
+    const categoryTodo = selectedCategory.value;
     // 입력값이 없으면 데이터를 추가하지 않음
     if (!todo.trim()) {
       return;
@@ -35,6 +56,7 @@
       const newTodo = {
         text: todo,
         completed: false,
+        category: categoryTodo,
         date: getCurrentDate()
       };
       emit('add', newTodo); // 서버 응답 데이터를 부모 컴포넌트에 전송
@@ -55,9 +77,16 @@
     const searchText = keyword.value;
     try {
       emit('search', searchText.trim());
-      clearKeyword();
     } catch (error) {
       console.error('Failed to search todos: ', error);
+    }
+
+  } async function filterTodos() {
+    const searchCategory = searchTodoCategory.value;
+    try {
+      emit('filter', searchCategory);
+    } catch (error) {
+      console.error('Failed to filtering todos: ', error);
     }
   }
 
@@ -71,50 +100,82 @@
 
   // 입력창 비우기
   const clearTodo = () => todoInput.value = '';
-  const clearKeyword = () => keyword.value = '';
 </script>
 
 <style scoped>
-/* 부모 컨테이너를 flexbox로 설정 */
-  .container {
-    flex-direction: column; /* 세로 방향으로 정렬 */
-    justify-content: center; /* 수직 중앙 정렬 */
-    align-items: center; /* 수평 중앙 정렬 */
-    height: 5vh; /* 화면 전체 높이 사용 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    transform: translateX(100px);
-  }
+.add-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-size: 16px;
+  margin: 20px auto;
+  width: 100%;
+}
 
-  input {
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 10px; /* 버튼과 간격을 줌 */
-    margin-left: 10px;
-    width: 250px; /* 적당한 너비 설정 */
-  }
+.search {
+  display: flex;
+  gap: 10px;
+}
 
-  .b1 {
-    background: linear-gradient(to right, #9fd8ff, #ff92aa);
-    padding: 8px 5px;
-    border-radius: 50px;
-    min-width: 65px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #000000;
-    cursor: pointer;
-    margin-left: 10px;
-    box-shadow: 0px 2px 2px 2px #ffffff40 inset, 0px -2px 2px 2px #00000020 inset;
-  }
-  .b2 {
-    background: linear-gradient(to right, #ff0000, #f700ff);
-    padding: 10px 5px;
-    border-radius: 50px;
-    min-width: 65px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #000000;
-    cursor: pointer;
-    margin-left: 10px;
-    box-shadow: 0px 2px 2px 2px #ffffff40 inset, 0px -2px 2px 2px #00000020 inset;
-  }
+.search select {
+  padding-left: 80px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search input {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-input input {
+  padding: 8px;
+  font-size: 14px;
+  width: 200px; /* 입력 필드 크기 조절 */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-input select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-input button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.b1 {
+  background-color: #007bff;
+  color: white;
+}
+
+.b2 {
+  background-color: #dc3545;
+  color: white;
+}
+
+.b3 {
+  background-color: green;
+  color: white;
+}
 </style>
