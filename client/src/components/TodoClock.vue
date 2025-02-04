@@ -43,11 +43,11 @@ onMounted(() => {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        padding: 15px;
         border-radius: 20px;
-        background: rgba(255, 145, 0, 0.904); /* 투명한 배경 */
+        background: rgba(173, 239, 118, 0.9); /* 투명한 배경 */
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* 그림자 */
-        border: 5px solid #000000;
+        border: 5px solid #b3c3b7;
     }
     @font-face {
     font-family: 'Ownglyph_StudyHard-Rg';

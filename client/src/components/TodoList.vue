@@ -2,9 +2,10 @@
     <ul>
         <p class="t1" v-for="(item, index) in props.todoItems" :key="item.id">
             <span :class="{completed: item.completed}">{{ item.text }}</span>
+            <span class="category">{{ item.category }}</span>
             <span class="date">{{ item.date }}</span>
-            <button @click="completeTodo(item.id)">완료</button>
-            <button @click="removeTodo(item.id, index)">삭제</button>
+            <button class="complete-btn" @click="completeTodo(item.id)">완료</button>
+            <button class="delete-btn" @click="removeTodo(item.id, index)">삭제</button>
         </p>
     </ul>
 </template>
@@ -17,6 +18,7 @@
     todoItems: Array,
   });
 
+  console.log(props.todoItems);
   // 부모 컴포넌트로 이벤트 전송을 위한 emit 정의
   const emit = defineEmits(['remove', 'complete']);
       async function removeTodo(id, index) {
@@ -43,19 +45,26 @@
     text-align: center;
     /* overflow-x: hidden; */
   }
-  button {
-      background: linear-gradient(to right, #9fd8ff, #ff92aa);
-      padding: 8px 5px;
-      box-sizing: border-box;
-      border-radius: 50px;
-      min-width: 65px;
-      height: auto;
-      font-size: 16px;
-      font-weight: 700;
-      color: #000000;
-      cursor: pointer;
-      margin-left: 10px;
-      box-shadow: 0px -3px 3px #ffffff, 0px 3px 3px #cccccc;
+  .complete-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #ff9100;
+    color: white;
+    margin-left: 20px;
+  }
+
+  .delete-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #a19ea9;
+    color: white;
+    margin-left: 20px;
   }
   @font-face {
       font-family: 'Ownglyph_StudyHard-Rg';
@@ -68,9 +77,14 @@
       text-decoration: line-through;
       color: gray;
   }
-  .date {
-    margin-left: 10px;
+  .category {
+    margin-left: 50px;
     font-size: 0.9em;
-    color: gray;
+    color: #003cff;
+  }
+  .date {
+    margin-left: 50px;
+    font-size: 0.9em;
+    color: #f700ff;
   }
 </style>

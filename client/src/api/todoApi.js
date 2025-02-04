@@ -29,3 +29,10 @@ export const searchTodoItems = async (keyword) => {
 export const clearAllTodoItems = async () => {
   await apiClient.delete('/todos');
 };
+
+export const filteredTodos = async (category) => {
+  const response = await apiClient.get('/todos/filter', {
+    params: { category }
+  });
+  return response.data;
+}

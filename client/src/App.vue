@@ -1,9 +1,11 @@
 <template>
-    <TodoHeader></TodoHeader>
-    <TodoClock></TodoClock>
-    <TodoInput @add = "addTodo" @clear = "clearTodos" @search = "searchTodos"></TodoInput>
-    <TodoList :todoItems = "todoItems" @remove ="removeTodo" @complete = "completeTodo"></TodoList>
-    <TodoFooter></TodoFooter>
+  <TodoHeader></TodoHeader>
+  <TodoClock class="todo-clock"></TodoClock>
+  <TodoInput @add = "addTodo" @clear = "clearTodos" @search = "searchTodos" @filter = "filteringTodos"></TodoInput>
+  <div class="grid-container2">
+    <TodoList class="todo-list" :todoItems = "todoItems" @remove ="removeTodo" @complete = "completeTodo"></TodoList>
+    <TodoFooter class="todo-footer"></TodoFooter>
+  </div>
 </template>
 
 <script setup>
@@ -14,8 +16,19 @@ import TodoFooter from './components/TodoFooter.vue';
 import TodoClock from './components/TodoClock.vue';
 import { useTodo } from './composable/useTodo';
 
-const { todoItems, addTodo, completeTodo, removeTodo, clearTodos, searchTodos } = useTodo();
+const { todoItems, addTodo, completeTodo, removeTodo, clearTodos, searchTodos, filteringTodos } = useTodo();
 </script>
 
 <style scoped>
+  .grid-container2 {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 45vh;
+  }
+  .todo-list {
+    overflow-y: auto;
+  }
+  .todo-footer {
+    height: 100px;
+  }
 </style>

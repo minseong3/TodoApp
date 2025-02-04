@@ -1,5 +1,6 @@
 package todo.todominsung.module.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,32 +23,41 @@ public class TodoService {
 
     // todoDto를 db에 저장하고 반환
     public TodoDto createTodo(TodoDto todoDto) {
+        todoDto.setDate(LocalDate.now()); // 현재 날짜 자동 설정
         todoMapper.insertTodo(todoDto);
         return todoDto;
     }
     // Todo 검색 조회
     public List<TodoDto> searchTodos(String keyword) {
-        return todoMapper.searchTodos(keyword);
+        return todoMapper.searchedTodos(keyword);
     }
+
     // Todo 전체 조회
     public List<TodoDto> getAllTodos() {
-        List<TodoDto> allTodos = todoMapper.findAll();
-        return allTodos;
+        return todoMapper.findAll();
     }
+
+    // Todo 필터링 조회
+    public List<TodoDto> filteringTodos(String category) {
+        return todoMapper.filteredTodos(category);
+    }
+
     // db에서 id를 찾아 text를 변경하고 todoDto로 매핑 후 반환
-    public TodoDto updateTodoText(Long id, String newText) {
-        TodoDto updatedTodo = todoMapper.updateTodoText(id, newText);
-        return updatedTodo;
+    public void updateTodoText(Long id, String newText) {
+        todoMapper.updateTodoText(id, newText);
     }
+
     // completed 값 반전 뒤 todoDto로 매핑 후 반환
     public TodoDto completeTodo(Long id, Boolean completed) {
         todoMapper.completeTodo(id, completed);
         return todoMapper.findById(id);
     }
+
     // id를 인자로 받아 db에서 todo 삭제
     public void deleteTodo(Long id) {
         todoMapper.deleteTodo(id);
     }
+
     // db에 저장되어있는 todo 전부 삭제
     public void deleteAll() {
         todoMapper.deleteAllTodos();
