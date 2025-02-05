@@ -36,3 +36,8 @@ export const filteredTodos = async (category) => {
   });
   return response.data;
 }
+
+export const getRandomQuote = async () => {
+  const response = await apiClient.get('/quotes');
+  return response.data;
+}

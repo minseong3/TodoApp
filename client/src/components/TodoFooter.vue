@@ -8,14 +8,14 @@
 
 <script setup>
   import { ref, onMounted } from 'vue';
-  import apiClient from '@/api/axios';
+  import {getRandomQuote} from "@/api/todoApi";
 
   const randomQuote = ref('');
 
+  //서버에서 랜덤 명언 가져오기
   async function fetchRandomQuote() {
     try {
-      const response = await apiClient.get('/quotes'); //서버에서 랜덤 명언 가져오기
-      randomQuote.value = response.data;
+      randomQuote.value = await getRandomQuote();
     } catch (error) {
       console.error('Failed to fetch quote: ', error);
     }
