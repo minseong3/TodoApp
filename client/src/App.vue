@@ -12,8 +12,8 @@
 import TodoHeader from './components/TodoHeader.vue';
 import TodoInput from './components/TodoInput.vue';
 import TodoList from './components/TodoList.vue';
-import TodoFooter from './components/TodoFooter.vue';
-import TodoClock from './components/TodoClock.vue';
+import TodoFooter from './components/QuoteFooter.vue';
+import TodoClock from './components/DigitalClock.vue';
 import { useTodo } from './composable/useTodo';
 
 const { todoItems, addTodo, completeTodo, removeTodo, clearTodos, searchTodos, filteringTodos } = useTodo();
