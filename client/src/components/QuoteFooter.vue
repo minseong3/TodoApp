@@ -8,7 +8,7 @@
 
 <script setup>
   import { ref, onMounted } from 'vue';
-  import {getRandomQuote} from "@/api/todoApi";
+  import { getRandomQuote } from "@/api/todoApi";
 
   const randomQuote = ref('');
 

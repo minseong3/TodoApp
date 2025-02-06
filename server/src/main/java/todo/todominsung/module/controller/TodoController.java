@@ -2,6 +2,7 @@ package todo.todominsung.module.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import todo.todominsung.module.dto.TodoDto;
+import todo.todominsung.module.dto.TodoTextUpdateDto;
 import todo.todominsung.module.service.TodoService;
 
 import org.springframework.http.HttpStatus;
@@ -20,6 +21,7 @@ public class TodoController {
     // TODO..검색 조건 추가해서 구현하기
     @GetMapping("/search")
     public ResponseEntity<List<TodoDto>> searchTodos(@RequestParam(required = false) String keyword) {
+        System.out.println("검색 키워드: " + keyword);
         List<TodoDto> searchTodos = todoService.searchTodos(keyword);
         return ResponseEntity.ok(searchTodos);
     }
@@ -42,18 +44,19 @@ public class TodoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdTodo);
     }
 
-    @PatchMapping("/{id}/text")
-    public ResponseEntity<String> updateText(@PathVariable Long id, @RequestBody Map<String, String> updates) {
-        String newText = updates.get("text");
-        todoService.updateTodoText(id, newText); // Service 호출
+    @PostMapping("/{id}/text")
+    public ResponseEntity<String> updateTodo(@PathVariable Long id, @RequestBody TodoTextUpdateDto dto) {
+        String newText = dto.getText();
+        todoService.updateTodo(id, newText);
         return ResponseEntity.ok("Todo is patched");
     }
 
-    @PatchMapping("/{id}/complete")
-    public ResponseEntity<TodoDto> completeTodo(@PathVariable Long id, @RequestBody Map<String, Boolean> request) {
+    @PostMapping("/{id}/complete")
+    public ResponseEntity<String> completeTodo(@PathVariable Long id, @RequestBody Map<String, Boolean> request) {
         Boolean completed = request.get("completed");
-        TodoDto updatedTodo = todoService.completeTodo(id, completed);
-        return ResponseEntity.ok(updatedTodo);
+        todoService.completeTodo(id, completed);
+        System.out.println("완료 상태 값: " + completed);
+        return ResponseEntity.ok("complete Changed");
     }
 
     @DeleteMapping("/{id}")

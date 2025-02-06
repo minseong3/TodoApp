@@ -9,7 +9,6 @@ h1 {
   font-weight: 900;
   text-align: center;
   font-family: 'establishRetrosansOTF';
-  /* overflow-x: hidden; */
 }
 @font-face {
     font-family: 'establishRetrosansOTF';

@@ -38,7 +38,7 @@
   const selectedCategory = ref("공부");
   const searchTodoCategory = ref("전체");
 
-  // 현재 날짜를 추가하기위한 한수 선언
+  // 현재 날짜를 추가하기위한 함수 선언
   const getCurrentDate = () => {
     const now = new Date();
     return `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`;

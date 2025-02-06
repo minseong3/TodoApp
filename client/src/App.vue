@@ -3,7 +3,7 @@
   <TodoClock class="todo-clock"></TodoClock>
   <TodoInput @add = "addTodo" @clear = "clearTodos" @search = "searchTodos" @filter = "filteringTodos"></TodoInput>
   <div class="grid-container2">
-    <TodoList class="todo-list" :todoItems = "todoItems" @remove ="removeTodo" @complete = "completeTodo"></TodoList>
+    <TodoList class="todo-list" :todoItems = "todoItems" @remove ="removeTodo" @complete = "completeTodo" @update = "updateTodo"></TodoList>
     <TodoFooter class="todo-footer"></TodoFooter>
   </div>
 </template>
@@ -12,11 +12,11 @@
 import TodoHeader from './components/TodoHeader.vue';
 import TodoInput from './components/TodoInput.vue';
 import TodoList from './components/TodoList.vue';
-import TodoFooter from './components/TodoFooter.vue';
-import TodoClock from './components/TodoClock.vue';
+import TodoFooter from './components/QuoteFooter.vue';
+import TodoClock from './components/DigitalClock.vue';
 import { useTodo } from './composable/useTodo';
 
-const { todoItems, addTodo, completeTodo, removeTodo, clearTodos, searchTodos, filteringTodos } = useTodo();
+const { todoItems, addTodo, completeTodo, removeTodo, clearTodos, searchTodos, filteringTodos, updateTodo } = useTodo();
 </script>
 
 <style scoped>

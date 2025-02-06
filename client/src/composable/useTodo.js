@@ -6,7 +6,8 @@ import {
     removeTodoItem,
     clearAllTodoItems,
     searchTodoItems,
-    filteredTodos
+    filteredTodos,
+    updateTodoText
 } from "@/api/todoApi";
 
 export function useTodo() {
@@ -40,7 +41,21 @@ export function useTodo() {
         } catch (error) {
             console.error('Failed to search todos: ', error);
         }
-    }
+    };
+
+    // Todo update
+    const updateTodo = async (id, newText) => {
+        if(!newText.trim()) {
+            return;
+        }
+        try {
+            await updateTodoText(id, newText);
+            await loadTodos();
+        } catch (error) {
+            console.log('Failed to update todo: ', error);
+        }
+    };
+
     const completeTodo = async (id) => {
         if (!id) {
             console.error("ID가 유효하지 않습니다.");
@@ -50,10 +65,14 @@ export function useTodo() {
             // 현재 todo의 completed 값을 찾아 반전
             const todoIndex = todoItems.value.findIndex((item) => item.id === id);
             if(todoIndex !== -1) {
-                const currentCompleted = todoItems.value[todoIndex].completed;
-                const updatedCompleted = await completeTodoItem(id, {completed: !currentCompleted});
+                // 기존 completed 값 반전
+                const updatedCompleted = !todoItems.value[todoIndex].completed;
 
-                todoItems.value[todoIndex] = updatedCompleted;
+                // 서버 요청
+                await completeTodoItem(id, { completed: updatedCompleted });
+
+                // 최신 데이터 다시 불러오기
+                await loadTodos();
             }
         } catch (error) {
             console.error('Failed to complete todo: ', error);
@@ -91,5 +110,5 @@ export function useTodo() {
         loadTodos();
     });
 
-    return { todoItems, addTodo, completeTodo, removeTodo, clearTodos, searchTodos, filteringTodos };
+    return { todoItems, addTodo, completeTodo, removeTodo, clearTodos, searchTodos, filteringTodos, updateTodo };
 }
