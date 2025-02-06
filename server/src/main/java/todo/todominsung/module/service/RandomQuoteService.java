@@ -20,8 +20,8 @@ public class RandomQuoteService {
             ObjectMapper objectMapper = new ObjectMapper(); // JSON -> Java 객체 , Java 객체 -> JSON으로 변환할 때 사용
             InputStream inputStream = getClass().getResourceAsStream("/quotes.json");
             quotes = objectMapper.readValue(inputStream, new TypeReference<List<RandomQuote>>() {});
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to load quotes.json", e);
+        } catch (Exception error) {
+            throw new RuntimeException("Failed to load quotes.json", error);
         }
     }
 

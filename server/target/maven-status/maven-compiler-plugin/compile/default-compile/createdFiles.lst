@@ -7,4 +7,5 @@ todo\todominsung\module\entity\RandomQuote.class
 todo\todominsung\module\service\TodoService.class
 todo\todominsung\TodominsungApplication.class
 todo\todominsung\module\service\RandomQuoteService$1.class
+todo\todominsung\module\dto\TodoTextUpdateDto.class
 todo\todominsung\config\WebConfig.class

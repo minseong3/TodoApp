@@ -1,6 +1,7 @@
 C:\Users\CSPI\Desktop\vue-todo\server\src\main\java\todo\todominsung\module\controller\TodoController.java
 C:\Users\CSPI\Desktop\vue-todo\server\src\main\java\todo\todominsung\TodominsungApplication.java
 C:\Users\CSPI\Desktop\vue-todo\server\src\main\java\todo\todominsung\module\dto\TodoDto.java
+C:\Users\CSPI\Desktop\vue-todo\server\src\main\java\todo\todominsung\module\dto\TodoTextUpdateDto.java
 C:\Users\CSPI\Desktop\vue-todo\server\src\main\java\todo\todominsung\module\entity\RandomQuote.java
 C:\Users\CSPI\Desktop\vue-todo\server\src\main\java\todo\todominsung\module\service\RandomQuoteService.java
 C:\Users\CSPI\Desktop\vue-todo\server\src\main\java\todo\todominsung\module\controller\RandomQuotesController.java

@@ -4,14 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9112695-817d-4b7d-89c6-0a84409c2b40" name="Changes" comment="h2 -&gt; mybatis change refactoring">
+    <list default="true" id="d9112695-817d-4b7d-89c6-0a84409c2b40" name="Changes" comment="TodoApi.js add Annotation">
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/dto/TodoTextUpdateDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/api/todoApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/todoApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/QuoteFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/QuoteFooter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/TodoHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/TodoInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoInput.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/TodoList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/composable/useTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/composable/useTodo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/controller/RandomQuotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/controller/RandomQuotesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/controller/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/dto/TodoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/dto/TodoDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/mapper/TodoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/mapper/TodoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/service/RandomQuoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/service/RandomQuoteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/service/TodoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/RandomQuotesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/RandomQuotesController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/TodoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/TodoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/dto/TodoDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/dto/TodoDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/mapper/TodoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/mapper/TodoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/service/RandomQuoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/service/RandomQuoteService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/service/TodoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/service/TodoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +98,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
@@ -93,7 +110,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.27816093",
-    "settings.editor.selected.configurable": "project.scopes",
+    "settings.editor.selected.configurable": "Errors",
     "ts.external.directory.path": "C:\\Users\\CSPI\\Downloads\\ideaIU-2023.3.2.win\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -106,7 +123,7 @@
       <recent name="C:\Users\CSPI\Desktop\vue-todo\server\src\main\resources\mapper" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.TodoMsApplication">
+  <component name="RunManager" selected="Spring Boot.TodominsungApplication">
     <configuration name="TodoMsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="todominsung" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="todo.todoMs.TodoMsApplication" />
@@ -154,7 +171,10 @@
       <workItem from="1737613251462" duration="76000" />
       <workItem from="1737613343146" duration="93000" />
       <workItem from="1737613444457" duration="142000" />
-      <workItem from="1738285767033" duration="14431000" />
+      <workItem from="1738285767033" duration="18085000" />
+      <workItem from="1738312224614" duration="16818000" />
+      <workItem from="1738561771872" duration="28902000" />
+      <workItem from="1738650884933" duration="47482000" />
     </task>
     <task id="LOCAL-00001" summary="sssss">
       <option name="closed" value="true" />
@@ -196,7 +216,79 @@
       <option name="project" value="LOCAL" />
       <updated>1738300229414</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="search function refactoring backend">
+      <option name="closed" value="true" />
+      <created>1738308011706</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738308011706</updated>
+    </task>
+    <task id="LOCAL-00007" summary="search function add frontend">
+      <option name="closed" value="true" />
+      <created>1738555726276</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738555726276</updated>
+    </task>
+    <task id="LOCAL-00008" summary="TodoClock.vue changed to script setup">
+      <option name="closed" value="true" />
+      <created>1738555813102</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1738555813102</updated>
+    </task>
+    <task id="LOCAL-00009" summary="filtering function backend">
+      <option name="closed" value="true" />
+      <created>1738650697678</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738650697678</updated>
+    </task>
+    <task id="LOCAL-00010" summary="filtering function backend">
+      <option name="closed" value="true" />
+      <created>1738651091029</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738651091029</updated>
+    </task>
+    <task id="LOCAL-00011" summary="filtering function frontend">
+      <option name="closed" value="true" />
+      <created>1738651131953</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738651131953</updated>
+    </task>
+    <task id="LOCAL-00012" summary="TodoFooter refactoring">
+      <option name="closed" value="true" />
+      <created>1738720344610</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738720344610</updated>
+    </task>
+    <task id="LOCAL-00013" summary="file rename (Clock, Footer)">
+      <option name="closed" value="true" />
+      <created>1738729310334</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1738729310334</updated>
+    </task>
+    <task id="LOCAL-00014" summary="TodoApi.js add Annotation">
+      <option name="closed" value="true" />
+      <created>1738729388796</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1738729388796</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +326,18 @@
     <MESSAGE value="sssss" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="h2 -&gt; mybatis change refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="h2 -&gt; mybatis change refactoring" />
+    <MESSAGE value="search function refactoring backend" />
+    <MESSAGE value="search function add frontend" />
+    <MESSAGE value="TodoClock.vue changed to script setup" />
+    <MESSAGE value="filtering function backend" />
+    <MESSAGE value="filtering function frontend" />
+    <MESSAGE value="TodoFooter refactoring" />
+    <MESSAGE value="file rename (Clock, Footer)" />
+    <MESSAGE value="TodoApi.js add Annotation" />
+    <option name="LAST_COMMIT_MESSAGE" value="TodoApi.js add Annotation" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
