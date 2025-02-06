@@ -14,7 +14,7 @@ export const addTodoItem = async (newTodo) => {
 
 // 특정 id Todo를 완료 처리하는 API Request
 export const completeTodoItem = async (id, data) => {
-  const response = await apiClient.patch(`/todos/${id}/complete`, data);
+  const response = await apiClient.post(`/todos/${id}/complete`, data);
   return response.data;
 };
 
@@ -30,7 +30,7 @@ export const searchTodoItems = async (keyword) => {
   });
   console.log("검색 결과:", response.data);
   return response.data;
-}
+};
 
 // 모든 Todo를 삭제 처리하는 API Request
 export const clearAllTodoItems = async () => {
@@ -43,10 +43,16 @@ export const filteredTodos = async (category) => {
     params: { category }
   });
   return response.data;
-}
+};
 
 // 랜덤 명언을 가져오는 API Request
 export const getRandomQuote = async () => {
   const response = await apiClient.get('/quotes');
   return response.data;
+};
+
+export const updateTodoText = async (id, newText) => {
+  await apiClient.post(`/todos/${id}/text`, {
+    text: newText
+  });
 };
