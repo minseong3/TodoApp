@@ -1,5 +1,6 @@
 package todo.todominsung.module.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import todo.todominsung.module.dto.TodoDto;
 import todo.todominsung.module.dto.TodoTextUpdateDto;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
-
+@Slf4j
 @RestController
 @RequestMapping("/todos")
 public class TodoController {
@@ -21,7 +22,7 @@ public class TodoController {
     // TODO..검색 조건 추가해서 구현하기
     @GetMapping("/search")
     public ResponseEntity<List<TodoDto>> searchTodos(@RequestParam(required = false) String keyword) {
-        System.out.println("검색 키워드: " + keyword);
+        log.info("검색 키워드: {} ", keyword);
         List<TodoDto> searchTodos = todoService.searchTodos(keyword);
         return ResponseEntity.ok(searchTodos);
     }

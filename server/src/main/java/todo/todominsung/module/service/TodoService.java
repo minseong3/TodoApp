@@ -24,10 +24,11 @@ public class TodoService {
 
     // todoDto를 db에 저장하고 반환
     public TodoDto createTodo(TodoDto todoDto) {
-        todoDto.setDate(LocalDate.now()); // 현재 날짜 자동 설정 (query에서 구현)
         todoMapper.insertTodo(todoDto);
+        todoMapper.updateTodoTime(todoDto.getId());
         return todoDto;
     }
+
     // Todo 검색 조회
     public List<TodoDto> searchTodos(String keyword) {
         return todoMapper.searchedTodos(keyword);
