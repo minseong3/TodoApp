@@ -24,6 +24,8 @@ public interface TodoMapper {
     // Update 쿼리 .. @Param 사용 이유 : mybatis의 parameterType은 단일 객체 또는 단일 값만 가능하므로
     void updateTodo(@Param("id") Long id, @Param("text") String text);
 
+    void updateTodoTime(@Param("id") Long id);
+
     // Update Completed 쿼리
     void completeTodo(@Param("id") Long id, @Param("completed") Boolean completed);
 

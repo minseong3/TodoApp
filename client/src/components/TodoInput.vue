@@ -38,12 +38,6 @@
   const selectedCategory = ref("공부");
   const searchTodoCategory = ref("전체");
 
-  // 현재 날짜를 추가하기위한 함수 선언
-  const getCurrentDate = () => {
-    const now = new Date();
-    return `${now.getFullYear()}-${(now.getMonth() + 1).toString().padStart(2, '0')}-${now.getDate().toString().padStart(2, '0')}`;
-  };
-
   // methodss
   async function addTodo() {
     const todo = todoInput.value;
@@ -57,9 +51,8 @@
         text: todo,
         completed: false,
         category: categoryTodo,
-        date: getCurrentDate()
       };
-      emit('add', newTodo); // 서버 응답 데이터를 부모 컴포넌트에 전송
+      emit('add', newTodo); // add 이벤트를 newTodo 객체와 함께 부모 컴포넌트로 전송
       clearTodo();
     } catch (error) {
       console.error('Failed to add todo: ', error);
@@ -71,6 +64,8 @@
         console.error('Request error:', error.message);
       }
     }
+
+
   }
 
   async function searchTodos() {
