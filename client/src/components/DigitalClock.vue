@@ -35,7 +35,7 @@ onMounted(() => {
       align-items: center; /* 세로 중앙 정렬 */
     }
     p {
-        width: 165px; /* 너비 */
+        width: 170px; /* 너비 */
         height: 80px;
         text-align: center;
         font-family: 'Ownglyph_StudyHard-Rg';
@@ -45,7 +45,7 @@ onMounted(() => {
         align-items: center;
         padding: 15px;
         border-radius: 20px;
-        background: rgba(173, 239, 118, 0.9); /* 투명한 배경 */
+        background: #a2da10; /* 투명한 배경 */
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* 그림자 */
         border: 5px solid #b3c3b7;
     }
