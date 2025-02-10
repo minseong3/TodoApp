@@ -1,11 +1,12 @@
-todo\todominsung\module\mapper\TodoMapper.class
 todo\todominsung\module\controller\RandomQuotesController.class
+todo\todominsung\module\repository\TodoRepository.class
 todo\todominsung\module\dto\TodoDto.class
 todo\todominsung\module\service\RandomQuoteService.class
 todo\todominsung\module\controller\TodoController.class
-todo\todominsung\module\entity\RandomQuote.class
 todo\todominsung\module\service\TodoService.class
 todo\todominsung\TodominsungApplication.class
+todo\todominsung\module\controller\JRebelController.class
+todo\todominsung\module\dto\RandomQuoteDto.class
 todo\todominsung\module\service\RandomQuoteService$1.class
 todo\todominsung\module\dto\TodoTextUpdateDto.class
 todo\todominsung\config\WebConfig.class
