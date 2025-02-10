@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="add-input">
+    <div class="add">
       <input v-model="todoInput" type="text" placeholder="할 일을 입력하세요" @keyup.enter="addTodo">
       <select v-model="selectedCategory">
         <option value="공부">공부</option>
@@ -10,18 +10,19 @@
       </select>
       <button class="b1" @click="addTodo">추가</button>
       <button class="b2" @click="clearAllTodoItems">전부 삭제</button>
-
-      <div class="search">
+      <span class="filter-category">
         <select v-model="searchTodoCategory" @change="filterTodos">
-          <option value="전체">전체</option>
-          <option value="공부">공부</option>
-          <option value="운동">운동</option>
-          <option value="업무">업무</option>
-          <option value="기타">기타</option>
-        </select>
-        <input v-model="keyword" type="text" placeholder="검색 키워드를 입력하세요" @keyup.enter="searchTodos">
-        <button class="b3" @click="searchTodos">검색</button>
-      </div>
+        <option value="전체">전체</option>
+        <option value="공부">공부</option>
+        <option value="운동">운동</option>
+        <option value="업무">업무</option>
+        <option value="기타">기타</option>
+      </select>
+      </span>
+    </div>
+    <div class="search">
+      <input v-model="keyword" type="text" placeholder="검색 키워드를 입력하세요" @keyup.enter="searchTodos">
+      <button class="b3" @click="searchTodos">검색</button>
     </div>
   </div>
 </template>
@@ -98,7 +99,7 @@
 </script>
 
 <style scoped>
-.add-input {
+.add {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,11 +112,13 @@
 
 .search {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
 .search select {
-  padding-left: 80px;
+  padding: 8px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -136,7 +139,7 @@
   border-radius: 5px;
 }
 
-.add-input input {
+.add input {
   padding: 8px;
   font-size: 14px;
   width: 200px; /* 입력 필드 크기 조절 */
@@ -144,14 +147,14 @@
   border-radius: 5px;
 }
 
-.add-input select {
+.add select {
   padding: 8px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.add-input button {
+.add button {
   padding: 8px 12px;
   font-size: 14px;
   border: none;

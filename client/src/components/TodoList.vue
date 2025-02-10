@@ -99,7 +99,7 @@ import {defineProps, defineEmits} from 'vue';
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #a100ff;
+    background-color: #007761;
     color: white;
     margin-left: 20px;
   }
