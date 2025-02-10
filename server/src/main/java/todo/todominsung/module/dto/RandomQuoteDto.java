@@ -1,11 +1,11 @@
-package todo.todominsung.module.entity;
+package todo.todominsung.module.dto;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class RandomQuote {
+public class RandomQuoteDto {
     private  Long id;
     private String author;
     private String authorProfile;

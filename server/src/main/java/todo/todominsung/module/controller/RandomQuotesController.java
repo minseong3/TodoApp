@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import todo.todominsung.module.entity.RandomQuote;
+import todo.todominsung.module.dto.RandomQuoteDto;
 import todo.todominsung.module.service.RandomQuoteService;
 
 @RestController
@@ -15,7 +15,7 @@ public class RandomQuotesController {
     private RandomQuoteService randomQuoteService;
 
     @GetMapping
-    public RandomQuote getRandomQuote() {
+    public RandomQuoteDto getRandomQuote() {
         return randomQuoteService.getRandomQuote();
     }
 }
