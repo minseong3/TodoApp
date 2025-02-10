@@ -4,30 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9112695-817d-4b7d-89c6-0a84409c2b40" name="Changes" comment="TodoApi.js add Annotation">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/dto/TodoTextUpdateDto.java" afterDir="false" />
+    <list default="true" id="d9112695-817d-4b7d-89c6-0a84409c2b40" name="Changes" comment="Vue css refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/api/todoApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/api/todoApi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/QuoteFooter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/QuoteFooter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/TodoHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoHeader.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/DigitalClock.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/DigitalClock.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/TodoInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoInput.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/TodoList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TodoList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/composable/useTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/composable/useTodo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/controller/RandomQuotesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/controller/RandomQuotesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/controller/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/controller/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/dto/TodoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/dto/TodoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/mapper/TodoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/mapper/TodoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/service/RandomQuoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/service/RandomQuoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/service/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/dto/TodoTextUpdateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/todo/todominsung/module/dto/TodoTextUpdateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/TodominsungApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/TodominsungApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/RandomQuotesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/RandomQuotesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/TodoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/controller/TodoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/dto/TodoDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/dto/TodoDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/mapper/TodoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/mapper/TodoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/entity/RandomQuote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/mapper/TodoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/service/RandomQuoteService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/service/RandomQuoteService$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/service/RandomQuoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/service/RandomQuoteService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/service/TodoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/todo/todominsung/module/service/TodoService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -120,6 +108,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\CSPI\Desktop\vue-todo\server\src\main\java\todo\todominsung\config" />
       <recent name="C:\Users\CSPI\Desktop\vue-todo\server\src\main\resources\mapper" />
     </key>
   </component>
@@ -174,7 +163,12 @@
       <workItem from="1738285767033" duration="18085000" />
       <workItem from="1738312224614" duration="16818000" />
       <workItem from="1738561771872" duration="28902000" />
-      <workItem from="1738650884933" duration="47482000" />
+      <workItem from="1738650884933" duration="51275000" />
+      <workItem from="1738887145788" duration="10323000" />
+      <workItem from="1738908119359" duration="1494000" />
+      <workItem from="1738913147266" duration="427000" />
+      <workItem from="1738916286332" duration="6451000" />
+      <workItem from="1739150608585" duration="11423000" />
     </task>
     <task id="LOCAL-00001" summary="sssss">
       <option name="closed" value="true" />
@@ -288,7 +282,71 @@
       <option name="project" value="LOCAL" />
       <updated>1738729388796</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update function add to front">
+      <option name="closed" value="true" />
+      <created>1738829251118</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1738829251118</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Update function add to back">
+      <option name="closed" value="true" />
+      <created>1738829334757</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1738829334757</updated>
+    </task>
+    <task id="LOCAL-00017" summary="common refactoring">
+      <option name="closed" value="true" />
+      <created>1738829400082</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1738829400082</updated>
+    </task>
+    <task id="LOCAL-00018" summary="date from back">
+      <option name="closed" value="true" />
+      <created>1738916860138</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1738916860138</updated>
+    </task>
+    <task id="LOCAL-00019" summary="log config">
+      <option name="closed" value="true" />
+      <created>1738916897103</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1738916897103</updated>
+    </task>
+    <task id="LOCAL-00020" summary="JRebel request ignore">
+      <option name="closed" value="true" />
+      <created>1739148863307</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1739148863307</updated>
+    </task>
+    <task id="LOCAL-00021" summary="randomQuote refactoring">
+      <option name="closed" value="true" />
+      <created>1739161073113</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1739161073113</updated>
+    </task>
+    <task id="LOCAL-00022" summary="TodoMapper -&gt; TodoRepository">
+      <option name="closed" value="true" />
+      <created>1739161286533</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1739161286533</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +392,16 @@
     <MESSAGE value="TodoFooter refactoring" />
     <MESSAGE value="file rename (Clock, Footer)" />
     <MESSAGE value="TodoApi.js add Annotation" />
-    <option name="LAST_COMMIT_MESSAGE" value="TodoApi.js add Annotation" />
+    <MESSAGE value="Update function add to front" />
+    <MESSAGE value="Update function add to back" />
+    <MESSAGE value="common refactoring" />
+    <MESSAGE value="date from back" />
+    <MESSAGE value="log config" />
+    <MESSAGE value="JRebel request ignore" />
+    <MESSAGE value="randomQuote refactoring" />
+    <MESSAGE value="TodoMapper -&gt; TodoRepository" />
+    <MESSAGE value="Vue css refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vue css refactoring" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
