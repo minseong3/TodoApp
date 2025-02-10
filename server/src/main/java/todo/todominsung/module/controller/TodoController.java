@@ -16,10 +16,9 @@ import java.util.Map;
 @RestController
 @RequestMapping("/todos")
 public class TodoController {
-    @Autowired
+    @Autowired /* 필드 주입 방식 */
     private TodoService todoService;
 
-    // TODO..검색 조건 추가해서 구현하기
     @GetMapping("/search")
     public ResponseEntity<List<TodoDto>> searchTodos(@RequestParam(required = false) String keyword) {
         log.info("검색 키워드: {} ", keyword);

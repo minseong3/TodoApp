@@ -1,14 +1,12 @@
-package todo.todominsung.module.mapper;
+package todo.todominsung.module.repository;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.*;
 import todo.todominsung.module.dto.TodoDto;
-import todo.todominsung.module.dto.TodoTextUpdateDto;
 
 @Mapper
-public interface TodoMapper {
-    //!-- 쿼리문 --!//
+public interface TodoRepository {
     // SelectAllTodos
     List<TodoDto> findAll();
 
