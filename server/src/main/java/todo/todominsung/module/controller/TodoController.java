@@ -16,7 +16,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("/todos")
 public class TodoController {
-    @Autowired /* 필드 주입 방식 */
+    /* 필드 주입 방식 */
+    @Autowired
     private TodoService todoService;
 
     @GetMapping("/search")
@@ -28,8 +29,8 @@ public class TodoController {
 
     @GetMapping
     public ResponseEntity<List<TodoDto>> getAllTodos() {
-        List<TodoDto> todoDtos = todoService.getAllTodos();
-        return ResponseEntity.ok(todoDtos);
+        List<TodoDto> allTodos = todoService.getAllTodos();
+        return ResponseEntity.ok(allTodos);
     }
 
     @GetMapping("/filter")
@@ -55,7 +56,6 @@ public class TodoController {
     public ResponseEntity<String> completeTodo(@PathVariable Long id, @RequestBody Map<String, Boolean> request) {
         Boolean completed = request.get("completed");
         todoService.completeTodo(id, completed);
-        System.out.println("완료 상태 값: " + completed);
         return ResponseEntity.ok("complete Changed");
     }
 
