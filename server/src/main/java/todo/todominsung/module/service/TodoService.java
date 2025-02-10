@@ -1,6 +1,5 @@
 package todo.todominsung.module.service;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import org.springframework.transaction.annotation.Transactional;
 import todo.todominsung.module.dto.TodoDto;
-import todo.todominsung.module.mapper.TodoMapper;
+import todo.todominsung.module.repository.TodoRepository;
 
 
 @Transactional
@@ -20,23 +19,23 @@ public class TodoService {
      * 3. Setter 방식
      * 애너테이션 방식 사용해보기*/
     @Autowired
-    private TodoMapper todoMapper;
+    private TodoRepository todoRepository;
 
     // todoDto를 db에 저장하고 반환
     public TodoDto createTodo(TodoDto todoDto) {
-        todoMapper.insertTodo(todoDto);
-        todoMapper.updateTodoTime(todoDto.getId());
+        todoRepository.insertTodo(todoDto);
+        todoRepository.updateTodoTime(todoDto.getId());
         return todoDto;
     }
 
     // Todo 검색 조회
     public List<TodoDto> searchTodos(String keyword) {
-        return todoMapper.searchedTodos(keyword);
+        return todoRepository.searchedTodos(keyword);
     }
 
     // Todo 전체 조회
     public List<TodoDto> getAllTodos() {
-        return todoMapper.findAll();
+        return todoRepository.findAll();
     }
 
     // Todo 필터링 조회
@@ -44,26 +43,26 @@ public class TodoService {
         if("전체".equals(category)) {
             category = "ALL";
         }
-        return todoMapper.filteredTodos(category);
+        return todoRepository.filteredTodos(category);
     }
 
     // update to text
     public void updateTodo(Long id, String newText) {
-        todoMapper.updateTodo(id, newText);
+        todoRepository.updateTodo(id, newText);
     }
 
     // completed
     public void completeTodo(Long id, Boolean completed) {
-       todoMapper.completeTodo(id, completed);
+       todoRepository.completeTodo(id, completed);
     }
 
     // delete to todo
     public void deleteTodo(Long id) {
-        todoMapper.deleteTodo(id);
+        todoRepository.deleteTodo(id);
     }
 
     // clear Alltodo
     public void deleteAll() {
-        todoMapper.deleteAllTodos();
+        todoRepository.deleteAllTodos();
     }
 }
