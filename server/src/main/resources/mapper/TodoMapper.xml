@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="todo.todominsung.module.repository.TodoRepository">
+    <select id="findAll" resultType="todo.todominsung.module.dto.TodoDto">
+    /* TodoMapper, findAll */
+        SELECT ID           /* 아이디 */
+             , TEXT         /* 할 일 */
+             , COMPLETED    /* 완료 상태 */
+             , DATE         /* 날짜 */
+             , CATEGORY     /* 카테고리 */
+          FROM TODO
+    </select>
+
+
+    <select id="searchedTodos" resultType="todo.todominsung.module.dto.TodoDto">
+    /* TodoMapper, searchedTodos */
+        SELECT ID           /* 아이디 */
+             , TEXT         /* 할 일 */
+             , COMPLETED    /* 완료 상태 */
+             , DATE         /* 날짜 */
+             , CATEGORY     /* 카테고리 */
+          FROM TODO
+         WHERE 1=1
+           <if test="keyword != null and keyword != ''">
+           AND LOWER(TEXT) LIKE CONCAT('%', LOWER(#{keyword}), '%')
+           </if>
+    </select>
+
+    <select id="filteredTodos" resultType="todo.todominsung.module.dto.TodoDto">
+    /* TodoMapper, filteredTodos */
+        SELECT ID           /* 아이디 */
+             , TEXT         /* 할 일 */
+             , COMPLETED    /* 완료 상태 */
+             , DATE         /* 날짜 */
+             , CATEGORY     /* 카테고리 */
+          FROM TODO
+         WHERE 1=1
+           <if test="category != 'ALL'">
+           AND CATEGORY = #{category}
+           </if>
+    </select>
+
+
+    <insert id="insertTodo" parameterType="todo.todominsung.module.dto.TodoDto">
+    /* TodoMapper, insertTodo */
+        INSERT INTO TODO
+                  (
+                    TEXT
+                  , COMPLETED
+                  , DATE
+                  , CATEGORY
+                  )
+             VALUES
+                  (
+                    #{text}
+                  , #{completed}
+                  , #{date}
+                  , #{category}
+                  )
+    </insert>
+
+    <update id="updateTodoTime" parameterType="todo.todominsung.module.dto.TodoDto">
+    /* TodoMapper, updateTodoTime */
+        UPDATE TODO
+           SET date = DATE_FORMAT(SYSDATE(), '%Y-%m-%d')
+         WHERE 1=1
+           <if test="id != null and id != ''">
+           And id = #{id}
+           </if>
+    </update>
+
+    <update id="updateTodo" parameterType="todo.todominsung.module.dto.TodoTextUpdateDto">
+    /* TodoMapper, updateTodoText */
+        UPDATE TODO
+           SET TEXT = #{text}
+         WHERE 1=1
+           <if test="id != null and id != ''">
+           AND ID = #{id}
+           </if>
+    </update>
+
+    <update id="completeTodo" parameterType="todo.todominsung.module.dto.TodoDto">
+    /* TodoMapper, updateCompleteTodo */
+        UPDATE TODO
+           SET COMPLETED = #{completed}
+         WHERE 1=1
+           <if test="id != null and id != ''">
+           AND ID = #{id}
+           </if>
+    </update>
+
+    <delete id="deleteTodo" parameterType="long">
+    /* TodoMapper, deleteTodo */
+        DELETE
+          FROM TODO
+         WHERE 1=1
+           <if test="id != null and id != ''">
+           AND ID = #{id}
+           </if>
+    </delete>
+
+    <delete id="deleteAllTodos">
+    /* TodoMapper, deleteAllTodos */
+        DELETE
+          FROM TODO
+    </delete>
+</mapper>
